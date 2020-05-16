@@ -8,6 +8,25 @@ It follows a discrete event simulation model. Currently, there are models to sim
 This is an ongoing research project, these framework is in a **beta** stage.
 If you find any issue, please report.
 
+Installation
+----------
+
+We need to setup a Virtualenv and install all the dependencies
+
+```
+pip3 install virtualenv
+virtualenv -p python3 venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+Running
+----------
+
+```
+python -m blocksim.main
+```
+
 How to use
 ----------
 
