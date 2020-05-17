@@ -1,4 +1,5 @@
 import time
+import os
 from json import dumps as dump_json
 from blocksim.world import SimulationWorld
 from blocksim.node_factory import NodeFactory
@@ -7,7 +8,12 @@ from blocksim.models.network import Network
 
 
 def write_report(world):
-    with open('output/report.json', 'w') as f:
+    path = 'output/report.json'
+    if not os.path.exists(path):
+        os.mkdir('output')
+        with open(path, 'w') as f:
+            pass
+    with open(path, 'w') as f:
         f.write(dump_json(world.env.data))
 
 
